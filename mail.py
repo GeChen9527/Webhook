@@ -23,11 +23,8 @@ def mail():
         server.quit()  # 关闭连接
     except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
         ret = False
-    return ret
+    if ret:
+        return "邮件发送成功"
+    else:
+        print "邮件发送失败"
 
-
-ret = mail()
-if ret:
-    print("邮件发送成功")
-else:
-    print("邮件发送失败")

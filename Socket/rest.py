@@ -9,8 +9,10 @@ class chanel:
     def index():
         return '企迈云商 monitor-apiserver'
 
-    @app.route('/search_log/', methods=['GET', 'POST'])
-    def search_log():
+    @app.route('/create_url/', methods=['GET', 'POST'])
+    def create_url():
         if request.method == 'POST':
             return "error methods"
+        else
+            return
 
