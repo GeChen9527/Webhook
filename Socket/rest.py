@@ -1,22 +1,20 @@
 # encoding: utf-8
 from flask import Flask, request
+import createurl
 
 
-class chanel:
+class Chanel:
     app = Flask(__name__)
 
     @app.route('/')
     def index():
         return '企迈云商 webhook-apiserver'
 
-    @app.route('/token/', methods=['GET', 'POST'])
-    def create_url():
-        if request.method == 'POST':
+    @app.route('/manager/create', methods=['GET', 'POST'])
+    def create():
+        if request.method == 'GET':
             return "error methods"
-        else
-            return
+        else:
+            return createurl.url()
 
-    @app.route('/manager')
-    def index():
-        return '企迈云商 webhook-apiserver'
 
