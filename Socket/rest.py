@@ -7,12 +7,16 @@ class chanel:
 
     @app.route('/')
     def index():
-        return '企迈云商 monitor-apiserver'
+        return '企迈云商 webhook-apiserver'
 
-    @app.route('/create_url/', methods=['GET', 'POST'])
+    @app.route('/token/', methods=['GET', 'POST'])
     def create_url():
         if request.method == 'POST':
             return "error methods"
         else
             return
+
+    @app.route('/manager')
+    def index():
+        return '企迈云商 webhook-apiserver'
 
