@@ -26,5 +26,5 @@ def mail():
     if ret:
         return "邮件发送成功"
     else:
-        print "邮件发送失败"
+        return "邮件发送失败"
 

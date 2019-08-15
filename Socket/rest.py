@@ -1,9 +1,9 @@
 # encoding: utf-8
 from flask import Flask, request
-import createurl
+from manager import createurl
 
 
-class Chanel:
+class Interface:
     app = Flask(__name__)
 
     @app.route('/')
@@ -13,7 +13,13 @@ class Chanel:
     @app.route('/manager/create', methods=['GET', 'POST'])
     def create():
         if request.method == 'GET':
-            return "error methods"
+            return "企迈云商 error methods"
+        else:
+            return createurl.url()
+
+    def webhook():
+        if request.method == 'Post':
+            return "企迈云商 error methods"
         else:
             return createurl.url()
 
