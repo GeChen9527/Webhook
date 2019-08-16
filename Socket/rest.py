@@ -1,6 +1,8 @@
-# encoding: utf-8
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 from flask import Flask, request
 from manager import createurl
+from webhook import project
 
 
 class Interface:
@@ -17,10 +19,11 @@ class Interface:
         else:
             return createurl.url()
 
+    @app.route('/webhook', methods=['GET', 'POST'])
     def webhook():
-        if request.method == 'Post':
+        if request.method == 'GET':
             return "企迈云商 error methods"
         else:
-            return createurl.url()
+            return project.test()
 
 

@@ -1,4 +1,5 @@
-# encoding: utf-8
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 
 from Socket.rest import Interface
 
