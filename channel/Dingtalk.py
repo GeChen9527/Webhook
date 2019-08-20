@@ -39,7 +39,7 @@ def Dingtalk_alerting(value,metric,image,name,url,status):
 def Dingtalk_ok(image,name,url,status):
     text = """### 【Grafana告警】%s\n##### 告警状态：(%s) \n###### 告警图表：[图表](%s)\n###### 告警详细信息：[详细信息](%s)\n @13399550668""" % (name, status, image, url)
     print(name)  # url为机器人的webhook
-    url = "https://oapi.dingtalk.com/robot/send?access_token=9c5832afffb3acc1c522c44ddfd60f68265042293eae4b39090b0b38ad2f9fe3"
+    url = "https://oapi.dingtalk.com/robot/send?access_token=9c5832afffb3acc1c522c44ddfd60f68265042293eae4bx"
 
     header = {
         "Content-Type": "application/json",
