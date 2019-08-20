@@ -10,9 +10,9 @@ def client(sql):
       cursor.execute(sql)
       db.commit()
       Result_value = cursor.fetchall()
-      #Result = json.loads(json.dumps(Result_value))
-      #return Result[0][0]
-      return Result_value
+      Json_value = json.loads(json.dumps(Result_value))
+      value = Json_value[0][0]
+      return value
    except:
       db.rollback()
 
